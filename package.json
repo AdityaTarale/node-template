@@ -1,0 +1,17 @@
+{
+  "name": "node-template",
+  "version": "1.0.0",
+  "description": "base setup for nodejs projects",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-adityatarale:AdityaTarale/node-template.git"
+  },
+  "license": "ISC",
+  "author": "Aditya Tarale <tarale.adi@gmail.com>",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node src/server.js"
+  }
+}
