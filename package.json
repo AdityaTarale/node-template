@@ -1,21 +1,24 @@
 {
-  "name": "node-template",
-  "version": "1.0.0",
-  "description": "base setup for nodejs projects",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com-adityatarale:AdityaTarale/node-template.git"
-  },
-  "license": "ISC",
-  "author": "Aditya Tarale <tarale.adi@gmail.com>",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node src/server.js"
-  },
-  "devDependencies": {
-    "@types/node": "^25.6.0",
-    "typescript": "^6.0.3"
-  }
+    "name": "node-template",
+    "version": "1.0.0",
+    "description": "base setup for nodejs projects",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com-adityatarale:AdityaTarale/node-template.git"
+    },
+    "license": "ISC",
+    "author": "Aditya Tarale <tarale.adi@gmail.com>",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "node src/server.js",
+        "format:fix": "prettier . --write",
+        "format:check": "prettier . --check"
+    },
+    "devDependencies": {
+        "@types/node": "^25.6.0",
+        "prettier": "3.8.3",
+        "typescript": "^6.0.3"
+    }
 }
