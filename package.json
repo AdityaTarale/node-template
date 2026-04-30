@@ -8,7 +8,7 @@
     },
     "license": "ISC",
     "author": "Aditya Tarale <tarale.adi@gmail.com>",
-    "type": "commonjs",
+    "type": "module",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,5 +35,8 @@
             "npm run format:fix",
             "npm run lint:fix"
         ]
+    },
+    "dependencies": {
+        "dotenv": "^17.4.2"
     }
 }
