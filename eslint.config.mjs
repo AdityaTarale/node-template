@@ -11,21 +11,31 @@ export default defineConfig([
         files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
         plugins: { js },
         extends: ["js/recommended"],
-        languageOptions: { globals: globals.node },
+        languageOptions: {
+            globals: {
+                ...globals.node,
+                ...globals.jest,
+            },
+        },
     },
     tseslint.configs.recommendedTypeChecked,
     {
         languageOptions: {
             parserOptions: {
-                projectService: {
-                    allowDefaultProject: ["eslint.config.mjs"],
-                },
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
             },
         },
     },
     {
+        files: ["**/*.js", "**/*.mjs", "jest.config.js", "eslint.config.mjs"],
+        ...tseslint.configs.disableTypeChecked,
+    },
+    {
         rules: {
             "no-console": "warn",
+            "no-unused-vars": "warn",
+            "no-undef": "warn",
         },
     },
 ]);
